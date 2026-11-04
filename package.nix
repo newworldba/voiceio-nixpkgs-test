@@ -38,7 +38,7 @@ let
     ps:
     runtimeDeps
     ++ [
-      ps.pygobject
+      ps.pygobject3
     ]
   );
 in
