@@ -1,7 +1,7 @@
 {
   lib,
   python3,
-  fetchPypi,
+  fetchurl,
   wrapGAppsHook3,
   gobject-introspection,
   at-spi2-core,
@@ -47,8 +47,8 @@ py.buildPythonApplication rec {
   version = "1.15.1";
   pyproject = true;
 
-  src = fetchPypi {
-    inherit pname version;
+  src = fetchurl {
+    url = "https://files.pythonhosted.org/packages/98/3b/f62fbb465ec3a2e4311723ac5d8bf4293553609c12d3eb334b92f4b90956/python_voiceio-${version}.tar.gz";
     hash = "sha256-RT1xSI6peDPhdNcqsRJnimzQ1MZ6WI/V9IswQAMfh2M=";
   };
 
